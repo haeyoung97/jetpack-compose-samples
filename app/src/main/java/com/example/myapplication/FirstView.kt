@@ -32,7 +32,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.ui.theme.*
 
-
 @Preview(showBackground = true)
 @Composable
 fun FirstView() {
@@ -63,11 +62,8 @@ private fun MaterialComponent() {
                     },
                     navigationIcon = {
                         IconButton(onClick = {
-                            Toast.makeText(
-                                context,
-                                "Clicked Menu!",
-                                Toast.LENGTH_LONG
-                            ).show()
+                            val intent = Intent(context, DrawerActivity::class.java)
+                            context.startActivity(intent)
                         }) {
                             IconView(id = R.drawable.ic_menu)
                         }

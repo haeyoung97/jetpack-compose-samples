@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainView() {
+private fun MainView() {
     val navItems = listOf(
         BottomNavItem.First,
         BottomNavItem.Second,
@@ -87,7 +87,7 @@ sealed class BottomNavItem(
 }
 
 @Composable
-fun NavigationGraph(navController: NavHostController) {
+private fun NavigationGraph(navController: NavHostController) {
     NavHost(navController = navController, startDestination = BottomNavItem.First.screenRoute) {
         composable(BottomNavItem.First.screenRoute) {
             FirstView()

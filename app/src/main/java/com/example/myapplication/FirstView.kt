@@ -232,11 +232,8 @@ private fun BarComponent() {
                 IconView(id = R.drawable.ic_notifications)
             }
             IconButton(onClick = {
-                Toast.makeText(
-                    context,
-                    "Clicked MyPage!",
-                    Toast.LENGTH_LONG
-                ).show()
+                val intent = Intent(context, MyPageActivity::class.java)
+                context.startActivity(intent)
             }) {
                 IconView(id = R.drawable.ic_person)
             }

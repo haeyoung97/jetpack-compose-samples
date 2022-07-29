@@ -51,7 +51,7 @@ private fun ScrollListView() {
             modifier = Modifier.fillMaxSize(),
             state = listState
         ) {
-            for (i in 0..50) {
+            repeat(50) { i ->
                 item {
                     val (isClicked, setClicked) = remember { mutableStateOf(false) }
                     Box(

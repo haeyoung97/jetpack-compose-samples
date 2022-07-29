@@ -45,8 +45,7 @@ private fun DrawerView() {
                 drawerState.open()
             }
         }
-        NavigationDrawer(
-            drawerState = drawerState,
+        ModalNavigationDrawer(
             drawerContent = {
                 DrawerMenu(onDestinationClicked = { route ->
                     scope.launch {
@@ -60,7 +59,8 @@ private fun DrawerView() {
                         restoreState = true
                     }
                 })
-            }
+            },
+            drawerState = drawerState
         ) {
             NavigationGraph(
                 navController = navController,
